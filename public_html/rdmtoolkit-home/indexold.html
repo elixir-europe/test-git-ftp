@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RDM Toolkit test</title>
+  <meta name="description" content="Test home page idea">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body {font-family: 'Lato', sans-serif;font-variant-ligatures: none;}
+    main {width: 90%; margin: 0 auto;}
+    .flexbox {display: flex;flex-direction: column;}
+    .flexbox h2, .child-box a {border-radius: 5px;padding: 10px 20px 12px;}
+    .flexbox h2 {background: #484848; border: 1px solid #ddd; margin: 0 10px 0 0;color: white;transition: .2s background;font-weight: normal;font-size: 130%;}
+    .flexbox h2:hover {cursor: pointer;}
+    .child-box {list-style-type: none; padding: 0; margin: 0 0 1em;}
+    .child-box a:link {display: block; background: #eee;margin: 5px 10px 0 0;text-decoration: none;color: #000;}
+    .child-box a:visited {color: #000;}
+    .child-box a:hover  {text-decoration: none;background: #ddd;}
+    object {width: 100%; margin: 0 auto;display: block;}
+    .centered {text-align: center; margin-bottom: 0;}
+    @media only screen and (min-width: 600px) {
+      main {width: 70%;}
+      .child-box {height: 0; opacity: 0; transition: opacity .5s;}
+      .flexbox {flex-direction: row;}
+      .flexbox > div {width: 33%;}
+      object {width: 55%;}
+    }
+  </style>
+  <script>
+  /*
+  * Script to show/hide the buttons under the navigation tiles.
+  */
+  window.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth >= 500) {
+      document.querySelectorAll('.button').forEach(function(item) {
+        // Show the tiles when the cursor hovers over the <h2 class="button">.
+        // Does not apply to touchscreen devices. The CSS just shows all the
+        // subelements by default for those devices.
+        item.addEventListener('mouseenter', function() {
+          item.style.background = "#f47d21";
+          item.nextElementSibling.style.height = "auto";
+          item.nextElementSibling.style.opacity = "1";
+        });
+        // Hide the child boxes when the cursor leaves the wrapper <div>
+        item.parentElement.addEventListener('mouseleave', function() {
+          item.style.background = "#484848";
+          item.nextElementSibling.style.height= "0";
+          item.nextElementSibling.style.opacity = "0";
+        });
+      });
+    }
+  });
+  </script>
+</head>
+
+<body>
+  <main>
+      <h1>RDM Toolkit home idea</h1>
+      <p>[Short home page blurb]</p>
+      <p class="centered"><strong>Find resources by clicking on the RDM data lifecycle</strong></p>
+      <object type="image/svg+xml" data="images/rdm-lifecycle-sections.svg"></object>
+
+      <p>Or find resources by:</p>
+
+      <div class="flexbox">
+
+        <div class="your-job">
+          <h2 class="button">Job title</h2>
+          <ul class="child-box">
+            <li><a href="">Data Steward</a></li>
+            <li><a href="">Data Manager</a></li>
+          </ul>
+        </div>
+
+        <div class="use-cases">
+          <h2 class="button">Use case</h2>
+          <ul class="child-box">
+            <li><a href="">Marine</a></li>
+            <li><a href="">Plants</a></li>
+            <li><a href="">Use case 3</a></li>
+          </ul>
+        </div>
+
+        <div class="tool-function">
+          <h2 class="button">Tool function</h2>
+          <ul class="child-box">
+            <li><a href="">Function 1</a></li>
+            <li><a href="">Function 2</a></li>
+          </ul>
+        </div>
+
+      </div> <!-- /.flexbox -->
+    </main>
+
+</body>
+</html>

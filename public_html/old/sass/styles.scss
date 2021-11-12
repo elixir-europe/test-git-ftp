@@ -1,0 +1,722 @@
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_mixins.scss';
+@import 'font-awesome/font-awesome.scss';
+
+body {
+	font-family: $sans-serif;
+	font-variant-ligatures: none;
+	font-size: $m;
+	font-weight: 400;
+	line-height: 1.5;
+	// Stop subpixel anti-aliasing in Webkit
+	-webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100%;
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: $blue-link;
+	text-decoration: none;
+}
+
+.main-footer a {
+	color: $white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.subnav a {
+	display: block;
+	padding: 6px 10px 6px 15px;
+}
+
+.sidebar-one .subnav h2 a {
+	color: $white;
+	background: $blue-xxx-dark;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	text-transform: uppercase;
+	font-size: $s;
+}
+
+.sidebar-two .subnav h2 {
+	border-bottom: 2px solid $blue-xx-dark;
+	padding: 2px 10px 2px 15px;
+	font-size: $l;
+}
+
+.subnav ul a {
+	border-bottom: 1px solid $grey-x-light;
+	color: $black;
+	position: relative;
+	&.active {
+		color: $orange;
+	}
+	&.collapsed:before {
+		font-family: FontAwesome;
+    content: "\f0da\00a0";
+    color: $blue-xx-dark;
+    font-size: 1.1em;
+    position: absolute;
+    left: 5px;
+	}
+	&.expanded:before {
+		font-family: FontAwesome;
+    content: "\f0d7\00a0";
+    color: $orange;
+    font-size: 1.1em;
+    position: absolute;
+    left: 1px;
+	}
+}
+
+input {
+	font-size: $m;
+  font-family: $sans-serif;
+}
+
+input[type="text"] {
+	width: 150px;
+	border: 1px solid $grey;
+	line-height: 1.4;
+}
+
+input[type="submit"] {
+  padding: 3px 8px 4px;
+  border-radius: 4px;
+  border-style: none;
+  transition: background .15s;
+  color: $black;
+  background: $grey-x-light;
+  &:hover {
+  	color: $white;
+    background: $orange;
+    box-shadow: 0 0 5px $grey-light;
+    cursor: pointer;
+  }
+}
+
+/* =============================================================================
+    Typography
+   ========================================================================== */
+
+/*
+ * Headings
+ */
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+}
+
+// For the main page header only
+h1 {
+  font-size: 2em;
+  margin: -0.3em 0 0.67em;
+}
+
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 0;
+}
+
+footer h3 {
+	font-size: $m;
+	border-bottom: 1px solid $grey;
+}
+
+p + h2, p + h3 {
+  margin-top: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0 0;
+}
+
+.main-column ul {
+	padding-left: 40px;
+	margin: 0.5em 0 1.5em;
+	li:before {
+		font-family: 'FontAwesome';
+    content: '\f111';
+    color: $orange;
+    font-size: 0.5rem;
+    margin: 0 7px 0 -15px;
+    position: relative;
+    top: -2px;
+  }
+  ul {
+  	padding-left: 20px;
+  	margin: 0;
+		li:before {
+			content: "\f10c";
+		}
+  }
+  &.display-inline li:before {
+  	content: none;
+  }
+}
+
+.main-column ol {
+	margin: 0.5em 0 1.5em;
+	padding-left: 40px;
+	ol {
+		margin: 0;
+	}
+}
+
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+
+blockquote {
+  margin: 1em 40px;
+}
+
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+  font-style: italic;
+}
+
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+  margin: 0 0 1em;
+}
+
+
+
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+  color: red;
+}
+
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+
+q {
+  quotes: none;
+}
+
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+
+small {
+  font-size: 75%;
+}
+
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+
+sup {
+  top: -0.5em;
+}
+
+
+sub {
+  bottom: -0.25em;
+}
+
+/*
+ * Override default display of Field Collections
+ */
+.field-collection-view {
+  margin: 0;
+}
+
+.field-collection-container {
+  border: 0;
+}
+
+
+/*
+ * Layout
+ */
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+
+}
+
+.body-content .container {
+  display: column;
+	margin-top: 50px;
+}
+
+.main-column {
+
+}
+
+.sidebar-column {
+	margin-top: 20px;
+}
+
+.sidebar-one {
+
+}
+
+.sidebar-two {
+
+}
+
+.main-footer {
+	margin-top: 40px;
+	color: $white;
+	img {
+    width: 150px;
+    margin-bottom: $s;
+  }
+}
+
+.main-footer section:first-child {
+	background: $grey-dark;
+	padding-bottom: 40px;
+}
+
+.main-footer section:last-child {
+	background: $blue-xxx-dark;
+	padding: 5px 0 20px;
+	font-size: $s;
+	@include cf;
+	address {
+		float: right;
+		width: 50%;
+		text-align: right;
+
+	}
+}
+
+
+/*
+ * Main header
+ */
+.main-header {
+  background: $blue-xxx-dark;
+  height: 105px;
+  .container {
+  	position: relative;
+  }
+
+	// Assumes the logo is the only image
+  img {
+  	position: absolute;
+  	top: 30px;
+  	width: 150px;
+  }
+
+  .checkbox {
+  	display: none;
+  }
+
+  .nav-checkbox-label {
+  	width: 100%;
+		background: coral;
+		height: 45px;
+		z-index: 200;
+		left: 0;
+  }
+
+  // Main menu
+  nav {
+  	position: absolute;
+  	top: 45px;
+  	left: 0;
+  	z-index: 100;
+  	background: $black;
+  	width: 100%;
+  	a {
+  		color: $white;
+  		font-size: $s;
+  		text-transform: uppercase;
+  		transition: color 0.15s;
+  		padding: 10px $xs;
+  		border-bottom: 1px solid $grey;
+  		&:hover {
+  			color: $orange;
+  			text-decoration: none;
+  		}
+  	}
+  	.active a {
+  			color: $orange;
+  	}
+  	.floated-inline li {
+  		float: none;
+  	}
+  }
+
+  // Search form in header
+  form {
+  	position: absolute;
+  	right: 10px;
+  	top: 68px;
+  	border-radius: 6px;
+  	.checkbox, div {
+  		display: none;
+  	}
+  	.checkbox-label {
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: $blue-x-dark;
+			position: absolute;
+			right: 0;
+			border-radius: 5px;
+			&:hover {
+				cursor: pointer;
+			}
+			&:before {
+				content: "\f002";
+  			font-family: FontAwesome;
+  			font-size: $xl;
+  			color: $blue;
+  			position: relative;
+  			top: -1px;
+  			left: 6px;
+			}
+		}
+		.checkbox:checked + div {
+			display: block;
+			margin-top: 26px;
+			border-radius: 5px;
+			border-top-right-radius: 0;
+			background: $blue-x-dark;
+			padding: 10px;
+			box-shadow: 3px 3px 5px $grey;
+		}
+  }
+}
+
+
+/*
+ * Utility styles
+ */
+.hidden {
+  @include element-invisible;
+}
+
+.centre-align {
+  /* To work with floated elements as well */
+  display: table;
+  margin: 0 auto;
+}
+
+// 'low top margin'
+.lotm {
+  margin-top: 0.5em;
+}
+
+// 'top margin'
+.tm {
+  margin-top: 1em;
+}
+
+// 'extra top margin'
+.xtm {
+  margin-top: 1.5em;
+}
+
+// 'extra extra top margin'
+.xxtm {
+  margin-top: 2em;
+}
+
+// 'negative top margin'
+.negtm {
+  margin-top: -0.5em;
+}
+
+// 'no bottom margin'
+.nobm {
+  margin-bottom: 0;
+}
+
+// 'low bottom margin'
+.lobm {
+  margin-bottom: 0.5em;
+}
+
+// 'bottom margin'
+.bm {
+  margin-bottom: 1em;
+}
+
+// 'extra bottom margin'
+.xbm {
+  margin-bottom: 1.5em;
+}
+
+// 'extra extra bottom margin'
+.xxbm {
+  margin-bottom: 2em;
+}
+
+.tinted {
+  padding: 20px;
+  border-radius: 6px;
+  background: #efefef;
+  border: 1px solid #ebebeb;
+}
+
+.floated-inline {
+	list-style-type: none;
+	li {
+		float: left;
+	}
+	a {
+		display: block;
+	}
+}
+
+.display-inline {
+	li {
+		display: inline;
+		// Close gap caused by spaces in code.
+		margin-right: -4px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.separated {
+	li:after {
+		content: "\00a0\00a0|\00a0\00a0"
+	}
+	li:last-child:after {
+			content: ""
+	}
+}
+
+.align-right {
+	text-align: right;
+}
+
+.flexrow {
+	display: flex;
+	div {
+		margin: 1rem 0;
+	}
+	& > div {
+		padding: 20px 20px 15px 0;
+	}
+}
+
+footer {
+	.flexrow div {
+		margin: 0;
+		&:last-child {
+			text-align: center;
+    	padding-right: 0;
+		}
+		.display-inline li {
+			padding-right: 20px;
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+	.fa {
+		font-size: 1.75rem;
+		color: $grey;
+		transition: color 0.2s;
+		&:hover {
+			color: $orange;
+			text-decoration: none;
+		}
+	}
+}
+
+.percent-40 {
+	width: 40%;
+}
+
+.percent-20 {
+	width: 20%;
+}
+
+.percent-33 {
+	width: 33%;
+}
+
+@media (min-width: 700px) {
+	.container {
+		margin: 0 auto;
+		padding: 0 10px;
+		max-width: 1190px;
+  }
+
+	.body-content .container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+
+	.main-column {
+		flex-basis: 70%;
+		order: 2;
+	}
+
+	.sidebar-column {
+
+	}
+
+	.sidebar-one {
+		order: 1;
+		margin-top: 0;
+		flex-basis: 28%;
+	}
+
+	.sidebar-two {
+		order: 3;
+		margin-top: 0;
+		flex-basis: 100%;
+	}
+
+	.main-header {
+		height: 93px;
+		form .checkbox-label, .nav-checkbox-label {
+			display: none;
+		}
+		form {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			div {
+				display: block
+			}
+		}
+		nav {
+			position: absolute;
+			top: 72px;
+			left: 165px;
+			background: transparent;
+			.floated-inline li {
+				float: left;
+			}
+			a {
+				padding: 0 $xs;
+				border-bottom: 0;
+			}
+  	}
+  	img {
+  	position: absolute;
+  	top: 18px;
+  	width: 150px;
+  }
+	}
+}
+
+@media (min-width: 960px) {
+	.container {
+		margin: 0 auto;
+		padding: 0 10px;
+		max-width: 1190px;
+  }
+
+	.body-content .container {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+
+	.main-column {
+		order: 2;
+		flex-basis: 52%;
+	}
+
+	.sidebar-column {
+		flex-basis: 22%;
+		margin-top: 0;
+	}
+
+	.sidebar-one {
+		order: 1;
+	}
+
+	.sidebar-two {
+		order: 3;
+	}
+
+	.main-header form .checkbox-label {
+		display: none;
+	}
+}

@@ -1,0 +1,109 @@
+1606257512
+a:2:{s:7:"content";s:5767:"<div class="modular-row features small">
+    <div class="container">
+        <h2>Stuffed full of Amazing Features</h2>
+<h3>This is a non-inclusive smattering of them</h3>
+
+        <div class="feature-items">
+            <div class="row">
+                                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-text-height"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Markdown Syntax</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-code"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Twig Templating</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-rocket"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Smart Caching</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-tags"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Flexible Taxonomies</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-cloud-download"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Simple Install</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-cogs"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Powerful Plugins</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-dashboard"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Intuitive UI</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-file-text"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>File-Based</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-bookmark"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Documentation</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-github"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>On Github</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-html5"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Responsive Design</h4>
+                            
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-3 has-icon">
+                                                    <i class="fa fa-fw fa-heart"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Awesomazing</h4>
+                            
+                                                    </div>
+                    </div>
+                            </div>
+        </div>
+    </div>
+</div>
+";s:12:"content_meta";N;}

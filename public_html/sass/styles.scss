@@ -1,0 +1,1187 @@
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_mixins.scss';
+@import 'font-awesome/font-awesome.scss';
+
+// Necessary to make the footer stick to the bottom of the page.
+html, body {
+  height: 100%;
+}
+
+body {
+	font-family: $sans-serif;
+	font-variant-ligatures: none;
+	font-size: $m;
+	font-weight: 400;
+	line-height: 1.5;
+	// Stop subpixel anti-aliasing in Webkit
+	-webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: $blue-link;
+	text-decoration: none;
+}
+
+.main-footer a {
+	color: $white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.subnav a {
+	display: block;
+	padding: 6px 10px 6px 15px;
+}
+
+.subnav ul ul a {
+  padding-left: 27px;
+}
+
+.sidebar-one .subnav h2 a {
+	color: $white;
+	background: $blue-xxx-dark;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	text-transform: uppercase;
+	font-size: $s;
+}
+
+.sidebar-two .subnav h2 {
+	border-bottom: 2px solid $blue-xx-dark;
+	padding: 2px 10px 2px 15px;
+	font-size: $l;
+}
+
+.subnav ul a {
+	border-bottom: 1px solid $grey-x-light;
+	color: $black;
+	position: relative;
+	&.active {
+		color: $orange;
+	}
+	&.collapsed:before {
+		font-family: FontAwesome;
+    content: "\f0da\00a0";
+    color: $blue-xx-dark;
+    font-size: 1.1em;
+    position: absolute;
+    left: 5px;
+	}
+	&.expanded:before {
+		font-family: FontAwesome;
+    content: "\f0d7\00a0";
+    color: $orange;
+    font-size: 1.1em;
+    position: absolute;
+    left: 1px;
+	}
+}
+
+
+
+
+/* =============================================================================
+    Typography
+   ========================================================================== */
+
+/*
+ * Headings
+ */
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+}
+
+// For the main page header only
+h1 {
+  font-size: 2em;
+  margin: -0.3em 0 0.67em;
+}
+
+
+h2 {
+  font-size: 1.5em;
+}
+
+h2.little {
+	font-size: 1.25em;
+	margin-bottom: 0;
+}
+
+h2.table-heading {
+	border-bottom: 2px solid #f47d21;
+  font-size: 1.25rem;
+  margin: 1.5em 0 0;
+}
+
+main h2 {
+	margin-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin-bottom: 0.2em;
+}
+
+footer h3 {
+	font-size: $m;
+	border-bottom: 1px solid $grey;
+}
+
+p + h2, p + h3 {
+  margin-top: 1em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+.main-column ul {
+	padding-left: 40px;
+	margin: 0.5em 0 1.5em;
+	li:before {
+		font-family: 'FontAwesome';
+    content: '\f111';
+    color: $orange;
+    font-size: 0.5rem;
+    margin: 0 7px 0 -15px;
+    position: relative;
+    top: -2px;
+  }
+  ul {
+  	padding-left: 30px;
+  	margin: 0;
+		li:before {
+			content: "\f10c";
+		}
+  }
+  &.display-inline li:before {
+  	content: none;
+  }
+}
+
+.main-column ol {
+	margin: 0.5em 0 1.5em;
+	padding-left: 40px;
+	ol {
+		margin: 0;
+	}
+}
+
+.xbp li {
+  padding-bottom: 0.75em;
+  ul li {
+  	padding-bottom: 0.25em;
+  }
+}
+
+dl {
+	margin: 0.5em 0 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 1em 40px;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+
+blockquote {
+  margin: 1em 40px;
+}
+
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+  font-style: italic;
+}
+
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+  margin: 0 0 1em;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+  background: $grey-x-light;
+}
+
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 20px;
+}
+
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+
+q {
+  quotes: none;
+}
+
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+
+sup {
+  top: -0.5em;
+}
+
+
+sub {
+  bottom: -0.25em;
+}
+
+table {
+	width: 100%;
+	margin-bottom: 1.25em;
+	td, th {
+		padding: 8px 7px;
+	}
+	th {
+		text-align: left;
+		font-weight: bold;
+		vertical-align: middle;
+  	border-bottom: 2px solid #055472;
+	}
+	td {
+		vertical-align: top;
+    border-bottom: 1px solid #ebebeb;
+	}
+}
+
+/*
+ * Forms
+ */
+
+form .field {
+	margin: 1.5em 0;
+	clear: both;
+	// We need this to align textarea labels:
+	* {
+		vertical-align: top;
+	}
+	&.checkbox * {
+		vertical-align: baseline;
+	}
+}
+
+.field.inline-label {
+	label, input, textarea {
+		display: inline-block;
+	}
+	// We need a little top margin to offset vertical-align: top
+	label {
+		margin: 2px 5px 0 0;
+	}
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+.checkbox label {
+	font-weight: normal;
+}
+
+.description {
+  font-size: 0.85em;
+  color: $grey;
+  margin: 3px 0 0;
+}
+
+input {
+	font-size: $m;
+  font-family: $sans-serif;
+}
+
+header input[type="submit"] {
+  padding: 5px 8px 5px;
+  border-radius: 4px;
+  border-style: none;
+  transition: background .25s;
+  color: $black;
+  background: $grey-x-light;
+  &:hover {
+  	color: $white;
+    background: $orange;
+    box-shadow: 0 0 5px $grey-light;
+    cursor: pointer;
+  }
+}
+
+input[type="text"], input[type="email"], textarea {
+  border: 1px solid #b8b6b7;
+  padding: 3px;
+  width: 15em;
+}
+
+header input[type="text"] {
+	width: 10em;
+}
+
+select {
+	border: 1px solid $grey-light;
+	background: $white;
+	height: 27px;
+	line-height: 27px;
+	font-size: $s;
+}
+
+textarea {
+  border: 1px solid #b8b6b7;
+  padding: 3px;
+  width: 22em;
+  font-size: $m;
+  font-family: $sans-serif;
+  line-height: 1.4;
+	height: 8em;
+}
+
+legend {
+	display: block;
+  float: left;
+  font-size: 1.35em;
+  font-weight: bold;
+  margin: 0 0 1em;
+}
+
+/*
+ * Image fields use the <figure> and <figcaption> elements from HTML5
+ */
+.fltr {
+  float: right;
+  margin: 0 15px 1.25em 1.5em;
+}
+
+.fltl {
+  float: left;
+  margin: 0 1.25em 1.25em 0;
+}
+
+figure {
+  font-size: 0.875rem;
+  color: $grey;
+  margin-bottom: 1em;
+}
+
+figure img {
+  margin: 0;
+}
+
+img[class*='image-right'], figure[class*='image-right'] {
+  float: right;
+  margin: 0 12px 1.5em 1.5em;
+}
+
+.flexrow img[class*='image-right'], .flexrow figure[class*='image-right'] {
+  margin: 0 12px 0 1.5em;
+}
+
+img[class*='image-left'], figure[class*='image-left'] {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+.icon {
+  width: 80px;
+  margin: 0 1em 1em 0;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+img[class*='tiny'], figure[class*='tiny'] {
+  width: 100px;
+}
+
+img[class*='small'], figure[class*='small'] {
+  width: 180px;
+}
+
+img[class*='medium'], figure[class*='medium'] {
+  width: 220px;
+}
+
+img[class*='large'], figure[class*='large'] {
+  width: 260px;
+}
+
+img[class*='xlarge'], figure[class*='xlarge'] {
+  width: 300px;
+}
+
+figure.image-centre-huge {
+  width: 90%;
+  margin: 1.5em auto;
+  clear: both;
+}
+
+/*
+ * Override default display of Field Collections
+ */
+.field-collection-view {
+  margin: 0;
+}
+
+.field-collection-container {
+  border: 0;
+}
+
+a[href$=".pdf"] {
+  padding-right: 3px;
+  background-image: 0;
+  &:after {
+    font-family: FontAwesome;
+    content: "\00a0\f1c1";
+    color: $blue-link;
+    font-size: $s;
+  }
+}
+
+a.txt:after {
+  font-family: FontAwesome;
+  content: "\00a0\f0f6";
+  color: $blue-link;
+  font-size: $s;
+}
+
+/*
+ * Layout
+ */
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+
+}
+
+.body-content .container {
+  display: column;
+	margin-top: 50px;
+}
+
+.main-column {
+
+}
+
+.sidebar-column {
+	margin-top: 20px;
+}
+
+.sidebar-one {
+
+}
+
+.sidebar-two {
+
+}
+
+.main-footer {
+	margin-top: 40px;
+	color: $white;
+	img {
+    width: 150px;
+    margin-bottom: $s;
+  }
+}
+
+.main-footer .flexrow {
+	flex-direction: column;
+	.percent-40, .percent-20 {
+		padding-top: 15px;
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.main-footer section:first-child {
+	background: $grey-dark;
+	padding-bottom: 40px;
+}
+
+.main-footer section:last-child {
+	background: $blue-xxx-dark;
+	padding: 5px 0 20px;
+	font-size: $s;
+	@include cf;
+	address {
+		float: right;
+		width: 50%;
+		text-align: right;
+	}
+}
+
+/*
+ * Main header
+ */
+.main-header {
+  background: $blue-xxx-dark;
+  height: 125px;
+  .container {
+  	position: relative;
+  }
+
+	// Assumes the logo is the only image
+  img {
+  	position: absolute;
+  	top: 50px;
+  	width: 150px;
+  }
+
+  .checkbox {
+  	display: none;
+  }
+
+  .show-nav {
+  	width: 100%;
+		background: $black;
+		height: 38px;
+		z-index: 200;
+		left: 0;
+		position: absolute;
+		&:hover {
+			cursor: pointer;
+		}
+		&:before {
+				content: "\f0c9";
+  			font-family: FontAwesome;
+  			font-size: $xl;
+  			color: $white;
+  			position: relative;
+  			top: 5px;
+  			left: 10px;
+			}
+  }
+
+  // Main menu
+  nav {
+  	position: absolute;
+  	top: 38px;
+  	left: 0;
+  	z-index: 100;
+  	background: $black;
+  	width: 100%;
+  	border-top: 1px solid $grey;
+  	box-shadow: 3px 3px 8px $grey;
+  	a {
+  		color: $white;
+  		font-size: $s;
+  		text-transform: uppercase;
+  		transition: color 0.15s;
+  		padding: 10px $xs;
+  		border-bottom: 1px solid $grey;
+  		display: block;
+  		&:hover {
+  			color: $orange;
+  			text-decoration: none;
+  		}
+  	}
+  	.active a {
+  			color: $orange;
+  	}
+  	.floated-inline li {
+  		float: none;
+  	}
+  }
+
+	#show-search {
+			display: block;
+  		border: none;
+			width: 33px;
+			height: 33px;
+			background: $blue-x-dark;
+			position: absolute;
+			right: 10px;
+			top: 88px;
+			border-radius: 5px;
+			outline: 0;
+			&:hover {
+				cursor: pointer;
+			}
+			&:before {
+				content: "\f002";
+  			font-family: FontAwesome;
+  			font-size: $xl;
+  			color: $blue;
+  			position: relative;
+  			top: 0;
+  			left: 7px;
+			}
+		}
+  // Search form in header
+  form {
+  	position: absolute;
+  	right: 10px;
+  	top: 115px;
+  	border-radius: 6px;
+  	background: $blue-x-dark;
+  	padding: 20px 10px 10px;
+  	box-shadow: 3px 3px 5px $grey;
+  }
+  input[type="text"] {
+  	border: 0;
+  }
+
+}
+
+
+/*
+ * Utility styles
+ */
+.hidden {
+  @include element-invisible;
+}
+
+.centre-align {
+  /* To work with floated elements as well */
+  display: table;
+  margin: 0 auto;
+}
+
+.notm {
+  margin-top: 0;
+}
+
+.lotm {
+  margin-top: 0.5em;
+}
+
+.tm {
+  margin-top: 1em;
+}
+
+.xtm {
+  margin-top: 1.5em;
+}
+
+.xxtm {
+  margin-top: 2em;
+}
+
+.negtm {
+  margin-top: -0.5em;
+}
+
+.nobm {
+  margin-bottom: 0;
+}
+
+.lobm {
+  margin-bottom: 0.5em;
+}
+
+.bm {
+  margin-bottom: 1em;
+}
+
+.xbm {
+  margin-bottom: 1.5em;
+}
+
+.xxbm {
+  margin-bottom: 2em;
+}
+
+.little {
+	font-size: 90%;
+}
+
+.grey {
+	color: $grey;
+}
+
+.border {
+	border: 1px solid $grey-border;
+}
+
+.rounded {
+	border-radius: 6px;
+}
+
+.main-column .floated-inline {
+	@include cf;
+	padding-left: 0;
+	list-style-type: none;
+	li {
+		float: left;
+		&:before {
+			content: none;
+		}
+	}
+	a {
+		display: block;
+	}
+	// Add space betweeen elements when they are right aligned or left aligned.
+	&.right li {
+		padding-left: 10px;
+	}
+	&.left li {
+		padding-right: 10px;
+	}
+}
+
+.tinted {
+  padding: 20px;
+  border-radius: 6px;
+  background: #efefef;
+  border: 1px solid #ebebeb;
+  margin: 1.5em 0;
+  /*p:last-child {
+  	margin-bottom: 0;
+  }*/
+}
+
+.green-bg {
+	background: $green-x-light;
+}
+
+.red-bg {
+	background: $red;
+}
+
+.yellow-bg {
+	background: $yellow;
+}
+
+.display-inline {
+	clear: both;
+	li {
+		display: inline;
+		// Close gap caused by spaces in code.
+		margin-right: -4px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.separated {
+	li:after {
+		content: "\00a0\00a0|\00a0\00a0"
+	}
+	li:last-child:after {
+			content: ""
+	}
+}
+
+.align-right {
+	text-align: right;
+}
+
+.flexrow {
+	display: flex;
+	flex-direction: column;
+	//justify-content: space-between;
+/*	div {
+		margin: 1rem 0;
+	}
+	& > div {
+		// Mostly we don't want left padding.
+		padding: 20px 20px 15px 0;
+		// This is for when we do:
+		*/
+	.tinted, .padded {
+		padding: 20px;
+		margin: 0;
+	}
+	div div {
+		width: 100%;
+	}
+}
+
+
+footer {
+	.flexrow div {
+		margin: 0;
+		display: inline;
+		&:last-child {
+			text-align: center;
+    	padding-right: 0;
+		}
+		.display-inline li {
+			padding-right: 20px;
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+	.fa {
+		font-size: 1.75rem;
+		color: $grey;
+		transition: color 0.2s;
+		&:hover {
+			color: $orange;
+			text-decoration: none;
+		}
+	}
+}
+
+// Width for table cells and flexbox boxes. 'width' will apply to table cells but
+// for flexbox 'flex-basis' will take precedence. We make these percentages slightly less
+// because mostly we need a space between flexbox elements.
+.percent-75 {
+	width: 75%;
+	//flex-basis: 73.88%;
+}
+
+.percent-66 {
+	width: 66.6%;
+	//flex-basis: 65.7%;
+}
+
+.percent-50 {
+	width: 50%;
+	//flex-basis: 49.25%;
+}
+
+.percent-40 {
+	width: 40%;
+	//flex-basis: 65.7%;
+}
+
+.percent-25 {
+	width: 25%;
+	//flex-basis: 24.63%;
+}
+
+.percent-20 {
+	width: 20%;
+	//flex-basis: 19.5%;
+}
+
+.percent-33 {
+	width: 33.3%;
+	//flex-basis: 32.83%;
+}
+
+
+
+// Button styles to add content
+.doc, .event, .news, .task {
+  &:before {
+    font-family: 'FontAwesome';
+    color: $white;
+    padding-right: 6px;
+  }
+}
+
+/* General button links */
+.button a, button, input[type="submit"] {
+  display: inline-block;
+  color: $white;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 0;
+  line-height: 1;
+  transition: background 0.15s;
+  margin-bottom: 10px;
+  font-size: $m;
+  font-family: $sans-serif;
+  &:hover, &:active {
+    box-shadow: 0 0 5px $grey-light;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.blue a, button.blue, input.blue {
+  background: $blue-x-dark;
+  &:hover {
+    background: $blue-xxx-dark;
+  }
+}
+
+.orange a, button.orange, input.orange {
+background: $orange;
+  &:hover {
+    background: $blue-xx-dark;
+  }
+}
+
+.doc:before {
+  content: '\f0f6';
+}
+
+.event:before {
+  content: '\f133';
+}
+
+.news:before {
+  content: '\f1ea';
+}
+
+.task:before {
+  content: '\F0AE';
+}
+
+// For positioning buttons created by the .button a rules
+.buttons-inline {
+	div {
+		display: inline-block;
+		margin-right: 10px;
+	}
+	&.align-right div {
+		margin-right: 0;
+		margin-left: 10px;
+	}
+
+}
+@media (max-width: 700px) {
+.flexrow div[class*="percent"] {
+ width: 100%;
+ margin-bottom: $m;
+}
+}
+
+@media (min-width: 700px) {
+	.container {
+		margin: 0 auto;
+		padding: 0 10px;
+		max-width: 1190px;
+  }
+
+	.body-content .container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+
+	.main-column {
+		flex-basis: 70%;
+		order: 2;
+	}
+
+	.one-column .main-column {
+		flex-basis: 100%;
+	}
+
+	.sidebar-column {
+
+	}
+
+	.sidebar-one {
+		order: 1;
+		margin-top: 0;
+		flex-basis: 28%;
+	}
+
+	.sidebar-two {
+		order: 3;
+		margin-top: 0;
+		flex-basis: 100%;
+	}
+
+	.main-header {
+		height: 93px;
+		.show-nav, #show-search {
+			display: none;
+		}
+		form {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			border-radius: 6px;
+  		background: transparent;
+  		padding: 0;
+  		box-shadow: none;
+			div {
+				display: block
+			}
+		}
+		nav {
+			display: block;
+			top: 70px;
+			left: 165px;
+			background: transparent;
+			border-top: 0;
+			box-shadow: none;
+			.floated-inline li {
+				float: left;
+			}
+			a {
+				padding: 0 $xs;
+				border-bottom: 0;
+			}
+  	}
+  	img {
+  	position: absolute;
+  	top: 18px;
+  	width: 150px;
+  }
+	}
+
+	.flexrow {
+	margin-bottom: 1em;
+	flex-direction: row;
+	//justify-content: space-between;
+/*	div {
+		margin: 1rem 0;
+	}
+	& > div {
+		// Mostly we don't want left padding.
+		padding: 20px 20px 15px 0;
+		// This is for when we do:
+		*/
+	.tinted, .padded {
+		padding: 20px;
+		margin: 0;
+	}
+	& > div {
+		display: flex;
+	}
+	div div {
+		width: 100%;
+	}
+}
+
+.gutters {
+	margin: 0 0 0 -1em;
+	& > div {
+	 padding: 1em 0 0 1em;
+	}
+}
+
+
+
+	.main-footer .flexrow {
+	flex-direction: row;
+		.percent-40 {
+			width: 40%;
+			padding-right: 20px;
+		}
+		.percent-20 {
+			width: 20%;
+		}
+
+
+	}
+
+}
+
+@media (min-width: 960px) {
+	.container {
+		margin: 0 auto;
+		padding: 0 10px;
+		max-width: 1190px;
+  }
+
+	.body-content .container {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+
+	.main-column {
+		order: 2;
+		flex-basis: 52%;
+	}
+
+	.sidebar-column {
+		flex-basis: 22%;
+		margin-top: 0;
+	}
+
+	.two-column .main-column {
+		flex-basis: 76%;
+		padding-right: 20px;
+	}
+
+	.one-column .main-column {
+		flex-basis: 100%;
+	}
+
+	.sidebar-one {
+		order: 1;
+	}
+
+	.sidebar-two {
+		order: 3;
+	}
+
+	.main-header form .checkbox-label {
+		display: none;
+	}
+
+	#wrapper {position: relative;min-height: 100%;padding-bottom:350px;}
+footer {position: absolute; bottom: 0;width: 100%;background: coral;}
+}

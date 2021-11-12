@@ -1,0 +1,13 @@
+
+AddHandler application/x-httpd-alt-php73___lsphp .php
+
+
+AddHandler application/x-httpd-alt-php73___lsphp .php
+# BEGIN ANSIBLE MANAGED BLOCK
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} addon-dev-elixir-europe-org.a9437296-f6b2-4d90-8bd8-a780b961bffc.dummy$
+RewriteRule ^(.*)$ "http://a9437296-f6b2-4d90-8bd8-a780b961bffc.dummy/404" [R=301,L]
+</IfModule>
+# END ANSIBLE MANAGED BLOCK
+DirectoryIndex index.html index.php index.htm index.shtm index.shtml default.html

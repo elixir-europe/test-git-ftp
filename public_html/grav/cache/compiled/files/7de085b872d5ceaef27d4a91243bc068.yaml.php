@@ -1,0 +1,11 @@
+<?php
+return [
+    '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
+    'filename' => '/var/sites/d/dev.elixir-europe.org/public_html/grav/user/plugins/pagination/pagination.yaml',
+    'modified' => 1605652198,
+    'data' => [
+        'enabled' => true,
+        'built_in_css' => true,
+        'delta' => 0
+    ]
+];

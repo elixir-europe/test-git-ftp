@@ -1,0 +1,202 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Home page | ELIXIR Template</title>
+  <meta name="description" content="Home page for the ELIXIR website template, demonstrating
+  possible styles and HTML">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+.nav-checkbox-label {position: absolute;
+width: 100%;
+background: coral;
+padding: 10px;
+z-index: 200;
+left: 0;
+}
+header nav {
+  display: none;
+}
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="main-header" id="top">
+  	<div class="container">
+  	  <div class="hidden"><a href="#main-content">Skip to content</a></div>
+  	  <div id="logo">
+  	    <a href="/"><img src="images/white-orange-logo.png" alt="ELIXIR logo" title="Home" /></a>
+  	  </div>
+  	  <label for="nav-checkbox" class="nav-checkbox-label">Menu</label>
+			<input type='checkbox' id="nav-checkbox" class="checkbox">
+      <nav>
+        <ul class="floated-inline">
+          <li class="active"><a href="">Home</a></li>
+          <li><a href="">Tables</a></li>
+          <li><a href="">Components</a></li>
+          <li><a href="">Colours</a></li>
+        </ul>
+      </nav>
+
+      <form method="get" action="search.php" id="search">
+      	<label for="checkbox" class="checkbox-label" title="Search"></label>
+				<input type='checkbox' id="checkbox" class="checkbox">
+				<div>
+					<input  type="text" name="search" />
+					<input type="submit" class="button grey" value="Search"/>
+  			</div>
+			</form>
+    </div> <!-- /container -->
+  </header>
+  <!-- /HEADER -->
+
+  <!-- MAIN CONTENT AREA -->
+  <div class="body-content three-column">
+    <div class="container">
+
+      <!-- Main content -->
+      <main class="main-column" role="main" id="main-content">
+					<h1>Main heading (h1)</h1>
+					<p>Lorem ipsum dolor sit amet, <a href="">consectetur adipiscing elit</a>. Integer aliquam consequat
+					lorem, sit amet efficitur magna porta in. Ut blandit odio vitae dolor sollicitudin, a
+					finibus justo tempus. Proin mollis blandit felis eget dignissim. Maecenas ut tempus
+					tellus. Vestibulum nec turpis turpis. Pellentesque ac iaculis neque, at porttitor eros.</p>
+					<h2>Heading two</h2>
+					<p>This a is a paragraph.<p>
+					<h3>Heading three</h3>
+					<p>This a is a paragraph.<p>
+					<h4>Heading four</h4>
+					<p>This a is a paragraph.<p>
+					<h2>Lists</h2>
+					<ul>
+						<li>Item 1</li>
+						<li>Item 2</li>
+							<ul>
+								<li>Sub-item 1</li>
+								<li>Sub-item 2</li>
+							</ul>
+						<li>Item 3</li>
+						<li>Item 4</li>
+						<li>Item 5</li>
+					</ul>
+					<p>And an ordered one:</p>
+					<ol>
+						<li>Item 1</li>
+						<li>Item 2</li>
+							<ol>
+								<li>Sub-item 1</li>
+								<li>Sub-item 2</li>
+							</ol>
+						<li>Item 3</li>
+						<li>Item 4</li>
+						<li>Item 5</li>
+					</ol>
+
+				<ul class="display-inline separated align-right xtm xbm">
+					<li><a href="">Link 1</a></li>
+					<li><a href="#top">Back to the top</a></li>
+				</ul>
+      </main>
+
+      <!-- Sidebar one -->
+      <div class="sidebar-column sidebar-one">
+      <div class="subnav">
+        <h2><a href="">Sidebar title</a></h2>
+      	<nav>
+      	  <ul>
+            <li><a href="" class="active">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="" class="collapsed">Link 3</a></li>
+            <li><a href="" class="expanded">Link 4</a></li>
+        </ul>
+      	</nav>
+      </div>
+      </div>
+
+      <!-- Sidebar two -->
+		<div class="sidebar-column sidebar-two">
+		<!-- You may want to use the <aside> element rather than a <div> here,
+    if the <nav> is for related content i.e. <aside class="subnav" role="complementary">. -->
+      <div class="subnav">
+        <h2>Sidebar title</h2>
+      	<nav>
+      	  <ul>
+            <li class="active"><a href="">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="">Link 3</a></li>
+            <li><a href="">Link 4</a></li>
+        </ul>
+      	</nav>
+      </div>
+      </div>
+    </div> <!-- /container -->
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+  <section>
+  <h2 class="hidden">Global links</h2>
+    <div class="container">
+      <div class="fat-footer flexrow">
+        <div class="percent-40">
+        <h3>Links header</h3>
+					<nav>
+						<ul>
+							<li><a href="">Link 1</a></li>
+							<li><a href="">Link 2</a></li>
+							<li><a href="">Link 3</a></li>
+							<li><a href="">Link 4</a></li>
+					</ul>
+					</nav>
+      	</div>
+      	<div class="percent-40">
+      	<h3>Links header 2</h3>
+					<nav>
+						<ul>
+							<li><a href="">Link 1</a></li>
+							<li><a href="">Link 2</a></li>
+							<li><a href="">Link 3</a></li>
+							<li><a href="">Link 4</a></li>
+					</ul>
+					</nav>
+      	</div>
+      	<div class="percent-20">
+					<div><a href="/"><img src="images/white-orange-logo.png" alt="ELIXIR logo" title="Home" /></a></div>
+					<ul class="display-inline">
+						<li><a href="https://twitter.com/elixireurope" class="fa fa-twitter-square" title="Twitter"></a></li>
+						<li><a href="https://www.linkedin.com/company/elixir-europe" class="fa fa-linkedin-square" title="LinkedIn"></a></li>
+						<li><a href="https://www.youtube.com/channel/UCvwFIw5HomylguGOGxR8B8w" class="fa fa-youtube-square" title="YouTube"></a></li>
+						<li><a href="https://www.flickr.com/photos/elixir-europe/" class="fa fa-flickr" title="Flickr"></a></li>
+					</ul>
+      	</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="thin-footer">
+      	<address>Contact info<br />Address line 1, Address line 2<br >Tel: 123 456</address>
+				<p>Copyright statement</p>
+      </div>
+    </div>
+  </section>
+  </footer>
+
+  <script>
+  	// Hide search box for small screens
+  	/*window.addEventListener('resize', function(event){
+			var d = document.getElementById("search");
+			if (window.innerWidth < 500) {
+				d.classList.add("hidden");
+			} else {
+				d.classList.remove("hidden");
+			}
+		});*/
+  </script>
+
+</body>
+</html>

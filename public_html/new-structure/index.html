@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ELIXIR | Home page</title>
+  <meta name="description" content="ELIXIR home page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="site-title"><a href="index.html" title="Home page"><img src="images/elixir-logo.png" alt="ELIXIR logo" width="120" /><span>ELIXIR</span></a></h1>
+    <p class="strapline italic gray">Data for life</p>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="about.html">About us</a></li>
+        <li><a href="how-work.html">How we work</a></li>
+        <li><a href="what-offer.html">What we offer</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="intranet.html">Intranet</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <!-- START OF ELIXIR JOBS WIDGET -->
+        <!--
+        For displaying jobs from https://elixir-europe.org/about-us/vacancies.
+        HTML template for the jobs listing. The default here is a table.
+        You can change this to what you want (e.g. a list) but you need to keep
+        'template-wrapper' as the id of the parent element and 'template-item'
+        as the id of the element that wraps each job.  The placeholders {{title}},
+        {{location}} and {{closingDate}} are populated by the script.
+        -->
+        <table>
+          <thead>
+            <th>Title</th>
+            <th>Location</th>
+            <th>Closing date</th>
+          </thead>
+          <tbody id="template-wrapper">
+          <script id="template-item" type="text/template">
+            <tr>
+              <td>{{title}}</td>
+              <td>{{location}}</td>
+              <td>{{closingDate}}</td>
+            </tr>
+          </script>
+          </tbody>
+        </table>
+      <p><a href="https://elixir-europe.org/about-us/vacancies/form" target="_blank">Submit a job</a> on the ELIXIR Europe website.</p>
+        <script src="https://elixir-europe.org/sites/all/libraries/jobs/elixir-jobs.js"></script>
+      <!-- END OF ELIXIR JOBS WIDGET -->
+      <h1>Home page</h1>
+      <p>Home page contains:</p>
+      <ul>
+        <li>A brief statement of what ELIXIR is and does.</li>
+        <li>Banner photo to promote events, publications and news stories.</li>
+        <li>News headlines and Twitter feed.</li>
+        <li>Video intro to ELIXIR?</li>
+        <li>How we work: with links to Platforms, Communities, Commissioned Services.</li>
+        <li>What we offer: with links to Services, Industry support, Publications.</li>
+        <li>Get involved</li>
+        <li>Profile of a success story?</li>
+        <li>Job vacancies</li>
+        <li>Note: try to use photos of ELIXIR people.</li>
+      </ul>
+      <p><strong>Feel free to comment on the structure of this site in the <a href="https://docs.google.com/document/d/15inGQGZ4IDdmu9DxdT_kiM-akB4a2WiCYShgeDdhiEM/">Google Doc</a>.</strong></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>Footer: list of Nodes as now but replace 'About us' section with 'Highlights' and include links to Platforms, Communities, Industry support, Services.</p>
+  </footer>
+</body>
+</html>

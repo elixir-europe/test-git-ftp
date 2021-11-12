@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  padding: 0 10px;
+  color: #333;
+}
+
+a:link, a:visited {
+  color: #4a43da;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+main {
+  clear: both;
+  padding: 1em 0 3em;
+}
+
+.site-title a:link, .site-title a:visited {
+  font-size: 1.5em;
+  padding-left: 15px;
+  color: #333;
+  transition: color .2s;
+}
+
+.site-title a:hover, .site-title a:active {
+  color: #bbb;
+  text-decoration: none;
+}
+
+header nav {
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+}
+
+.main-nav li a:link, .main-nav li a:visited {
+  color: #333;
+}
+
+footer {
+  border-top: 2px solid #ccc;
+}
+
+main h1 {
+  font-size: 1.75em;
+}
+
+main ul {
+  list-style: none;
+}
+
+main li {
+  padding: 0;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+main li:before {
+  color: #aaa;
+  content: "\2022";
+  position: absolute;
+  top: 8px;
+  left: -10px;
+  font-size: 2em;
+  line-height: .25;
+}
+
+@media screen and (min-width: 1024px) {
+
+  header, main, footer {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  article, footer p {
+    padding: 0 15px;
+  }
+
+  .main-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav li {
+    float: left;
+  }
+
+  .main-nav li a:link, .main-nav li a:visited {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    transition: background .2s;
+    text-decoration: none;
+  }
+
+  .main-nav li a:hover {
+      background-color: #ddd;
+  }
+
+  .active {
+    background: #ddd;
+    text-decoration: none;
+  }
+
+  nav {
+    overflow: auto;
+  }
+
+}

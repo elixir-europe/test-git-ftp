@@ -1,0 +1,50 @@
+1606257512
+a:2:{s:7:"content";s:2868:"<div class="modular-row features big">
+    <div class="container">
+        <h2>Built on top of Greatness</h2>
+<h3>Four core tenants keep Grav focused</h3>
+<p>We believe the best recipe to make something great, is to bake with <a href="#features">quality ingredients</a> and add dollops of <a href="#features">cool stuff</a>. </p>
+
+        <div class="feature-items">
+            <div class="row">
+                                                    <div class="feature col-12 col-md-6 has-icon">
+                                                    <i class="fa fa-fw fa-fighter-jet"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Crazy Fast</h4>
+                            
+                                                            <p>Performance is not just an after thought, we baked it in from the start!</p>
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-6 has-icon">
+                                                    <i class="fa fa-fw fa-database"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Easy to build</h4>
+                            
+                                                            <p>Simple text files means Grav is trivial to install, and easy to maintain.</p>
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-6 has-icon">
+                                                    <i class="fa fa-fw fa-cubes"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Awesome Technology</h4>
+                            
+                                                            <p>Grav employees best-in-class technologies such as Twig, Markdown &amp; Yaml</p>
+                                                    </div>
+                    </div>
+                                    <div class="feature col-12 col-md-6 has-icon">
+                                                    <i class="fa fa-fw fa-puzzle-piece"></i>
+                        
+                        <div class="feature-content push">
+                                                            <h4>Super Flexible</h4>
+                            
+                                                            <p>From the ground up, with many plugin hooks, Grav is extremely extensible</p>
+                                                    </div>
+                    </div>
+                            </div>
+        </div>
+    </div>
+</div>
+";s:12:"content_meta";N;}

@@ -1,0 +1,13 @@
+1606257511
+a:2:{s:7:"content";s:469:"
+  
+<div class="header hero  modular-row showcase " style="background-image: url(/grav/user/pages/01.home/_showcase/showcase.jpg);">
+    <div class="container">
+                    <h1>Welcome to Grav</h1>
+<h2>Crazy <strong>Fast</strong>, Ridiculously <strong>Easy</strong>, Amazingly <strong>Powerful</strong>...</h2>
+        
+                    <a class="btn btn-primary" href="http://learn.getgrav.org">Read the Documentation</a>
+        
+            </div>
+</div>
+";s:12:"content_meta";N;}
