@@ -17,18 +17,4 @@ jobs:
           server: dev.elixir-europe.org
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          exclude: |
-            **/public_html/grav/**
-            **/public_html/kirby/**
-            **/public_html/b1mg/**
-            **/public_html/rdmtoolkit-home/**
-            **/public_html/fairplus/**
-            **/public_html/old/**
-            **/.git*
-            **/.git*/**
-            **/.composer/**
-            **/.composer*
-            **/.ssh*
-            **/.ssh*/**
-            **/.drush/**
-            **/.drush*
+          exclude: "[**/.git*/**, **/.composer/**, **/.drush/**, **/.ssh/**, **/public_html/b1mg/**, **/public_html/kirby/**, **/public_html/grav/**, **/public_html/old/**, **/public_html/rdmtoolkit-home/**, **/public_html/fairplus/**, **/public_html/b1mg-wireframes/**]"
