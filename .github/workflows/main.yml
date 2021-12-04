@@ -24,3 +24,11 @@ jobs:
             **/public_html/rdmtoolkit-home/**
             **/public_html/fairplus/**
             **/public_html/old/**
+            **/.git*
+            **/.git*/**
+            **/.composer/**
+            **/.composer*
+            **/.ssh*
+            **/.ssh*/**
+            **/.drush/**
+            **/.drush*
