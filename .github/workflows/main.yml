@@ -18,9 +18,9 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           exclude: |
-            **/grav/**
-            **/kirby/**
-            **/old/**
-            **/b1mg/**
-            **/fairplus/**
-            **/rdmtoolkit-home/**
+            **/public_html/grav/**
+            **/public_html/kirby/**
+            **/public_html/b1mg/**
+            **/public_html/rdmtoolkit-home/**
+            **/public_html/fairplus/**
+            **/public_html/old/**
