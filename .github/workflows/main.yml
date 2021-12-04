@@ -17,3 +17,10 @@ jobs:
           server: dev.elixir-europe.org
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
+          exclude: |
+            **/grav/**
+            **/kirby/**
+            **/old/**
+            **/b1mg/**
+            **/fairplus/**
+            **/rdmtoolkit-home/**
